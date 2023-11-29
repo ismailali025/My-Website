@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.sidebar{
+    background-color: black;
+    width: 10vw;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+}
+.sidebar nav{
+    padding: 0px;
+    height: 100vh;
+    
+}
+
+.sidebar nav li{
+        list-style: none;
+        font-size: 25px;
+        padding: 30px 0;
+        margin-left: 10px;
+}
+.sidebar nav li a{
+    text-decoration: none;
+    color: white;
+}
+.main{
+    background-color: lightblue;
+    width: 90vw;
+}
+.index.html:hover{
+    color: blue;
+}
+.container{
+    display: flex;
+}
+.infocontainer{
+    background-color: whitesmoke;
+    height: 77vh;
+    width: 80vw;
+    margin: 144px auto;
+    display: flex;
+    justify-content: space-around;
+   
+}
+.devpic img{
+    width: 25vw;
+    height: 77vh;
+    display: inline;
+    justify-items: right;
+    margin: 196 0px;
+}
+.devinfo{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+} 
+.hello{
+    font-size: 35px;
+    font-family: 'Playfair Display', serif; 
+}
+.name{
+    font-weight: bold;
+    font-size: 30px;
+    margin-top:25px;
+    
+   
+}
+.about{
+    font-size: 30px;
+    color: blue;
+    font-family: 'Dosis', sans-serif;
+}
+.buttons{
+    margin-top: 34px;
+}
+.buttons button{
+    padding: 10px;
+    border-radius: 39px;
+    color: black;
+    background-color: white;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+} 
+.buttons button:hover{
+    background-color: rgb(232, 224, 240);
+   color: rgb(0, 0, 0);
+}
+
+.contactform{
+    background-color: white; }
+    /* padding: 4px 452px;
+    padding-top: 144px;
+    font-size: large;
+    font-family: 'Dosis', sans-serif;   
+
+.contactform h2{
+    text-align: center;
+    font-family: 'Dosis', sans-serif;
+}
+.contactform div{
+    padding: 27px;
+}
+.contactform button {
+    padding: 7px;
+    margin: 31px;
+    border-radius: 39px;
+    font-weight: bolder;
+    cursor:pointer;
+} 
+.contactform label exampleInputEmail1{
+    padding: 4px;
+}
+.button button:hover{
+    background-color: rgb(232, 224, 240);
+    color: rgb(0, 0, 0);
+}*/ 
+.intro{
+    background-color:  black;
+} 
+.heading{
+    font-family: 'Ubuntu', sans-serif;
+   
+}
+.world
+{
+    font-size: 1.5em;
+}
+.xl{
+    font-size: 25px;
+    padding: 50px;
+}
+.hacl :hover{
+    background-color: rgb(232, 224, 240);
+   color: rgb(0, 0, 0);
+}
