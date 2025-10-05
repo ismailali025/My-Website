@@ -23,7 +23,16 @@
 
 /* --- Base Styles --- */
 * { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+
+/* THIS IS THE NEW FIX FOR ALL DEVICES */
+html, body {
+    overflow-x: hidden;
+}
+
+html { 
+    scroll-behavior: smooth; 
+}
+
 body {
     background-color: var(--bg-color);
     color: var(--primary-text-color);
@@ -280,7 +289,6 @@ p {
     width: 100%; 
     max-width: 600px; 
     margin: 0 auto; 
-    overflow: hidden; /* Hide overflowing buttons on desktop */
 }
 .slider-wrapper { 
     display: flex; 
