@@ -280,7 +280,7 @@ p {
     width: 100%; 
     max-width: 600px; 
     margin: 0 auto; 
-    overflow: hidden; /* Hide overflowing buttons on desktop */
+    /* overflow: hidden; */ /* <-- REMOVED THIS LINE TO FIX DESKTOP BUTTONS */
 }
 .slider-wrapper { 
     display: flex; 
