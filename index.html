@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Ismail Ali Mohammed | Cybersecurity & Full-Stack Development</title>
+    <meta name="description" content="Personal portfolio of Ismail Ali Mohammed, showcasing projects like Secure Wipe and Cipher Hub, and skills in Python, cybersecurity, and web development.">
+    <meta name="keywords" content="Ismail Ali Mohammed, cybersecurity, python, flask, portfolio, secure wipe, cipher hub">
+    <meta name="author" content="Ismail Ali Mohammed">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav class="navbar" id="navbar">
+        <a href="#home" class="nav-logo">IAM.</a>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#portfolio">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button id="theme-toggle"><i class="fa-solid fa-circle-half-stroke"></i></button>
+            <button class="hamburger" id="hamburger"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <header class="hero container" id="home">
+        <canvas id="matrix-canvas"></canvas>
+        <div class="hero-content reveal">
+            <h1>Ismail Ali Mohammed</h1>
+            <p id="typing-effect" class="tagline"></p>
+            <a href="#portfolio" class="btn btn-primary">View My Projects</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="container reveal" id="portfolio">
+            <h2>Projects</h2>
+            <div class="grid">
+                <div class="card project-card">
+                    <img src="secure-wipe.png" alt="Secure Wipe Project">
+                    <h3>Secure Wipe</h3>
+                    <p>Created a full-stack web application to solve data security risks in IT asset recycling for the Smart India Hackathon. Presented a live demo to judges, receiving high praise.</p>
+                    <a href="https://secure-wipe.vercel.app/" target="_blank" class="btn btn-primary">Live Website</a>
+                </div>
+                <div class="card project-card">
+                    <img src="cipher-hub.png" alt="Cipher Hub Project">
+                    <h3>Cipher Hub</h3>
+                    <p>A comprehensive, privacy-first web application for secure, on-device file encryption. Runs entirely client-side using the Web Crypto API to ensure absolute user privacy.</p>
+                    <a href="https://cipherhub-web.vercel.app/#home" target="_blank" class="btn btn-primary">Live Website</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="container reveal" id="skills">
+            <h2>Technical Skills</h2>
+            <div class="grid">
+                <div class="card skills-card">
+                    <h4>Languages</h4>
+                    <ul><li>Python</li><li>C</li><li>HTML/CSS</li></ul>
+                </div>
+                <div class="card skills-card">
+                    <h4>Operating Systems</h4>
+                    <ul><li>Kali-Linux</li><li>Windows</li><li>Ubuntu</li><li>Parrot</li><li>Mint</li></ul>
+                </div>
+                <div class="card skills-card">
+                    <h4>Kali-Linux Tools</h4>
+                    <ul><li>Nmap</li><li>Metasploit</li><li>John</li><li>Wireshark</li><li>Dirsearch</li><li>Burp Suite</li><li>Gobuster</li><li>Traceroute</li><li>Searchsploit</li><li>Git</li></ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="container reveal" id="experience">
+            <h2>Experience</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Member @ Cyber Elites Club</h3>
+                    <h4>NSAKCET, Hyderabad, IN</h4>
+                    <p class="date">Nov 2024 - Present</p>
+                    <ul>
+                        <li>Attended "Hacking 101 Workshop" where learned about Google Dorking.</li>
+                        <li>Assess and troubleshoot computer problems brought by students, faculty, and staff.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Volunteer @ IEEE Student Branch</h3>
+                    <h4>NSAKCET, Hyderabad, IN</h4>
+                    <p class="date">Nov 2022 - Jan 2025</p>
+                    <ul>
+                        <li>Conducted Workshops and competitions as part of IEEE Computer Society.</li>
+                        <li>Improved public speaking abilities by delivering seminars.</li>
+                        <li>Conducted a hands-on GitHub workshop demonstrating practical application.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section class="container reveal" id="certifications">
+            <h2>Certifications</h2>
+            <div class="slider-container">
+                <div class="slider-wrapper">
+                    <div class="cert-slide">
+                        <a href="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-KZMZVLCRJI.pdf" target="_blank">
+                            <div class="cert-block">
+                                <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg" fill="var(--primary-text-color)">
+                                    <rect width="400" height="250" rx="8" fill="var(--card-bg-color)" stroke="var(--border-color)" stroke-width="2"/>
+                                    <text x="50%" y="45%" dominant-baseline="middle" text-anchor="middle" font-size="24" font-family="Space Grotesk">TryHackMe</text>
+                                    <text x="50%" y="60%" dominant-baseline="middle" text-anchor="middle" font-size="18" fill="var(--accent-color)">Pre-Security</text>
+                                </svg>
+                                <h4>Pre-Security Certification</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="cert-slide">
+                        <a href="YOUR_CERTIFICATE_LINK_HERE" target="_blank">
+                             <div class="cert-block">
+                                <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg" fill="var(--primary-text-color)">
+                                     <rect width="400" height="250" rx="8" fill="var(--card-bg-color)" stroke="var(--border-color)" stroke-width="2"/>
+                                     <text x="50%" y="45%" dominant-baseline="middle" text-anchor="middle" font-size="24" font-family="Space Grotesk">Cisco</text>
+                                     <text x="50%" y="60%" dominant-baseline="middle" text-anchor="middle" font-size="16" fill="var(--accent-color)">Introduction to Cybersecurity</text>
+                                </svg>
+                                <h4>Introduction to Cybersecurity</h4>
+                             </div>
+                        </a>
+                    </div>
+                </div>
+                <button class="slider-btn prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="slider-btn next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+
+        <section class="container reveal" id="education">
+            <h2>Education</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Bachelor's in Computer Science</h3>
+                    <h4>Nawab Shah Alam Khan College of Engineering and Technology</h4>
+                    <p class="date">Sep 2022 - June 2026</p>
+                </div>
+                <div class="card">
+                    <h3>High School</h3>
+                    <h4>Narayana Junior college</h4>
+                    <p class="date">July 2020 - May 2022</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="container reveal" id="contact">
+            <h2>Get In Touch</h2>
+            <p style="text-align: center;">Feel free to reach out via email or connect with me on LinkedIn.</p>
+            <p style="text-align: center; font-size: 1.2rem; margin-top: -1rem;"><a href="mailto:infa.ismailali@gmail.com" style="color: var(--accent-color);">infa.ismailali@gmail.com</a></p>
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="https://linkedin.com/in/ismailali2004" target="_blank" class="btn btn-primary">View My LinkedIn</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="social-icons">
+            <a href="https://linkedin.com/in/ismailali2004" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+        <p>&copy; 2025 Ismail Ali Mohammed. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
