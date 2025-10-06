@@ -34,16 +34,6 @@ document.addEventListener("DOMContentLoaded", function() {
     };
     const matrixInterval = setInterval(drawMatrix, 30);
 
-    // ... rest of your code from const typingElement onwards ...
-
-    // Find your existing resize listener at the bottom and add one line
-    window.addEventListener('resize', () => { 
-        setupCanvas(); // <-- ADD THIS LINE to redraw the matrix on resize
-        currentTranslate = currentIndex * -sliderWrapper.offsetWidth / slides.length;
-        prevTranslate = currentTranslate;
-        sliderWrapper.style.transform = `translateX(${currentTranslate}px)`;
-    });
-
     const typingElement = document.getElementById('typing-effect');
     const words = ["Cybersecurity Student", "Aspiring SOC Analyst", "Bug Bounty Hunter"];
     let wordIndex = 0, charIndex = 0, isDeleting = false;
@@ -72,6 +62,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let isDragging = false, startPos = 0, currentTranslate = 0, prevTranslate = 0, animationID;
     
     function updateSliderPosition() {
+        // This simple calculation is more robust
         sliderWrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
     }
 
@@ -84,16 +75,16 @@ document.addEventListener("DOMContentLoaded", function() {
         currentIndex = (currentIndex > 0) ? currentIndex - 1 : slides.length - 1;
         updateSliderPosition();
     }
-    if(nextBtn) nextBtn.addEventListener('click', nextSlide);
-    if(prevBtn) prevBtn.addEventListener('click', prevSlide);
- 
-    if (sliderWrapper) {
-        window.addEventListener('resize', () => { // Recalculate on resize
-            currentTranslate = currentIndex * -sliderWrapper.offsetWidth / slides.length;
-            prevTranslate = currentTranslate;
-            sliderWrapper.style.transform = `translateX(${currentTranslate}px)`;
-        });
+
+    if(nextBtn && prevBtn) {
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
     }
+   
+    window.addEventListener('resize', () => { 
+        setupCanvas(); 
+        updateSliderPosition(); // Just update to the current slide's position
+    });
 
     // --- ALL OTHER SCRIPTS ---
     const navbar = document.getElementById('navbar');
