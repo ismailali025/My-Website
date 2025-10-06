@@ -387,7 +387,25 @@ p {
     margin: 0 1rem; 
     transition: color 0.3s ease; 
 }
+/* --- Light Mode Card Text Fix --- */
+.light-mode .card h3 {
+    color: #0056b3; /* A darker, more readable blue */
+}
 
+.light-mode .card p {
+    color: #333; /* A standard dark gray for excellent readability */
+}
+/* --- Light Mode Hero Text Fix --- */
+.light-mode .hero-content h1 {
+    color: #f0f0f0; /* Keeps your name white on the dark hero background */
+}
+/* --- Light Mode Navbar Text Fix --- */
+.light-mode .nav-logo,
+.light-mode .nav-links a,
+.light-mode #theme-toggle,
+.light-mode .hamburger {
+    color: #f0f0f0; /* Forces the navbar text/icons to always be white */
+}
 /* --- MOBILE RESPONSIVENESS --- */
 @media (max-width: 768px) {
     .container {
