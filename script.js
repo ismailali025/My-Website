@@ -86,66 +86,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     if(nextBtn) nextBtn.addEventListener('click', nextSlide);
     if(prevBtn) prevBtn.addEventListener('click', prevSlide);
-
-    // Touch & Mouse Drag functionality
-    if (sliderWrapper) {
-        slides.forEach((slide, index) => {
-            slide.addEventListener('dragstart', (e) => e.preventDefault());
-            // Touch events
-            slide.addEventListener('touchstart', touchStart(index));
-            slide.addEventListener('touchend', touchEnd);
-            slide.addEventListener('touchmove', touchMove);
-            // Mouse events
-            slide.addEventListener('mousedown', touchStart(index));
-            slide.addEventListener('mouseup', touchEnd);
-            slide.addEventListener('mouseleave', touchEnd);
-            slide.addEventListener('mousemove', touchMove);
-        });
-    }
-
-    function touchStart(index) {
-        return function(event) {
-            currentIndex = index;
-            startPos = getPositionX(event);
-            isDragging = true;
-            animationID = requestAnimationFrame(animation);
-            sliderWrapper.style.transition = 'none';
-        }
-    }
-    
-    function touchEnd() {
-        if (!isDragging) return;
-        isDragging = false;
-        cancelAnimationFrame(animationID);
-        const movedBy = currentTranslate - prevTranslate;
-
-        if (movedBy < -100 && currentIndex < slides.length - 1) currentIndex++;
-        if (movedBy > 100 && currentIndex > 0) currentIndex--;
-        
-        sliderWrapper.style.transition = 'transform 0.5s ease-in-out';
-        currentTranslate = currentIndex * -sliderWrapper.offsetWidth / slides.length;
-        sliderWrapper.style.transform = `translateX(${currentTranslate}px)`;
-        prevTranslate = currentTranslate;
-    }
-    
-    function touchMove(event) {
-        if (isDragging) {
-            const currentPosition = getPositionX(event);
-            currentTranslate = prevTranslate + currentPosition - startPos;
-        }
-    }
-    
-    function getPositionX(event) {
-        return event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
-    }
-    
-    function animation() {
-        if (isDragging) {
-            sliderWrapper.style.transform = `translateX(${currentTranslate}px)`;
-            requestAnimationFrame(animation);
-        }
-    }
-    
+ 
     if (sliderWrapper) {
         window.addEventListener('resize', () => { // Recalculate on resize
             currentTranslate = currentIndex * -sliderWrapper.offsetWidth / slides.length;
